@@ -129,6 +129,7 @@ public class CloudProviderEndpointServiceTest {
             .builder()
             .serviceType(serviceType)
             .endpoint("www.example.com")
+            .providerId("provider-RECAS-BARI")
             .type(Type.COMPUTE)
             .build())
         .build();
@@ -185,6 +186,7 @@ public class CloudProviderEndpointServiceTest {
             .builder()
             .serviceType("unknownType")
             .endpoint("www.example.com")
+            .providerId("provider-RECAS-BARI")
             .type(Type.COMPUTE)
             .build())
         .build();

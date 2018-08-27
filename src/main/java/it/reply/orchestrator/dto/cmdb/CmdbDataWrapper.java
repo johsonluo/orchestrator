@@ -26,7 +26,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
-import org.checkerframework.checker.nullness.qual.Nullable;
 
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -34,12 +33,9 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 public abstract class CmdbDataWrapper<U extends CmdbDataWrapper<U, T>, T> {
 
   @JsonProperty("_id")
-  @Nullable
+  @NonNull
+  @NotNull
   private String id;
-
-  @JsonProperty("type")
-  @Nullable
-  private String type;
 
   @JsonProperty("data")
   @NonNull
